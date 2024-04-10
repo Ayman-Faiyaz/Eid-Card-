@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Eid Mubarak!</title>
+</head>
+<body>
+
+    <audio id="myAudio" controls loop class="">
+        <source src="audio.mp3" type="audio/mpeg"> 
+    </audio>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('myAudio');
+            audio.play().then(() => {
+                // Autoplay started successfully
+            }).catch(error => {
+                // Autoplay was prevented
+                console.log('Autoplay prevented:', error);
+            });
+            audio.muted = false;
+        });
+    </script>
+        
+
+    <script>
+        window.onload=function(){
+            document.getElementById("autoplay").play();
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        window.onload = function() {
+            function startConfettiLoop() {
+                
+                var width = window.innerWidth;
+                var height = window.innerHeight;
+
+                
+                confetti({
+                    particleCount: 250, 
+                    spread: 360, 
+                    origin: { x: Math.random(), y: Math.random() } // Set the launch position
+                });
+
+                setTimeout(startConfettiLoop, 1000);
+            }
+
+            startConfettiLoop();
+        };
+    </script>
+    
+</body>
+</html>
