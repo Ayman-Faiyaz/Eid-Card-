@@ -21,3 +21,21 @@ body {
 .hidden {
     display: none;
 }
+
+#playButton {
+    padding: 1em;
+    cursor: pointer;
+    background: #72a1ec;
+    border: 1px solid white;
+    border-radius: 2em;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+}
+
+#playButton:hover {
+    background-color: #85a7f0
+}
